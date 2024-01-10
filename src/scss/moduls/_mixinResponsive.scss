@@ -1,0 +1,6 @@
+@mixin modeResponsive($valor) {
+	// queremos que cuando se llame "modeResponsive" establezca un breakpoint y haga algo cuando se cumpla
+	@media (max-width: $valor) {
+		@content; // se coloca content para que haga lo que se vaya colocar dentro de la funcion en el class que sea aplicado
+	}
+}

@@ -1,0 +1,46 @@
+.navbar-menu {
+	position: fixed;
+	width: 100%;
+	height: $hmenu;
+	padding: 0 80px;
+	line-height: $hmenu; //uso de variable global
+	z-index: 1;
+	background-color: #480ca8;
+
+	.logo {
+		font-size: 30px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	.nav-options {
+		float: right;
+		list-style: none;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	a {
+		padding: 10px;
+		font-size: 20px;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #fff;
+
+		border-radius: 3px;
+		transition: all 0.5s ease;
+
+		&:focus,
+		&:hover {
+			background: lighten(#471a74d9, 30%); //funcion sass color para aclarar
+		}
+	}
+
+	.checkbtn,
+	#check {
+		display: none;
+	}
+}

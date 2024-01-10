@@ -1,0 +1,39 @@
+.clientes {
+	min-height: $alturaSeccion;
+	padding: $relleno;
+	position: relative;
+	color: #fff;
+
+	background: url(../img/fondotestimonials.jpg);
+	background-size: cover;
+	background-attachment: fixed; //esto crea el efecto PARALAX
+
+	&::before {
+		width: 100%;
+		height: 100%;
+		position: absolute; //debe ser absolute para que quede por encima de la img
+		top: 0;
+		left: 0;
+		content: ""; //debe llevar content
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.clientes-group {
+		margin-top: 30px;
+	}
+
+	.clientes-card {
+		width: 33%;
+		height: 33%;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.img-perfil {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border: 3px solid #fff;
+		object-fit: cover;
+	}
+}

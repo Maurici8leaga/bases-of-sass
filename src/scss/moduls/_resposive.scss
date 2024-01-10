@@ -1,0 +1,201 @@
+// table size
+@include modeResponsive(1024px) {
+	.navbar-menu {
+		padding: 0 60px;
+
+		li {
+			margin: 0 2px;
+		}
+
+		a {
+			font-size: 16px;
+		}
+	}
+
+	.banner,
+	.servicios,
+	.clientes,
+	.contacto {
+		padding: 60px;
+	}
+
+	.banner {
+		h2 {
+			font-size: 47px;
+		}
+
+		p,
+		a {
+			font-size: 18px;
+		}
+	}
+
+	.container h2 {
+		font-size: 40px;
+	}
+
+	.servicios {
+		padding: 60px;
+
+		.servicios-imgx {
+			width: 40%;
+			height: 40%;
+		}
+
+		h4 {
+			font-size: 14px;
+		}
+	}
+
+	.clientes {
+		.clientes-card {
+			width: 40%;
+			height: 40%;
+		}
+
+		.img-perfil {
+			width: 180px;
+			height: 180px;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	}
+
+	.contacto {
+		.form-control {
+			width: 80%;
+			padding: 0.5rem;
+			margin: 0.8rem;
+		}
+
+		.submt-btn {
+			width: 80%;
+			font-size: 0.8rem;
+		}
+	}
+
+	.footer {
+		min-height: 15vh;
+
+		.social {
+			width: 100%;
+		}
+
+		.copr {
+			width: 100%;
+			text-align: center;
+			margin-top: 10px;
+		}
+	}
+}
+
+// mobil sizes
+@include modeResponsive(768px) {
+	.navbar-menu {
+		padding: 0 40px;
+
+		.nav-options {
+			width: 100%;
+			height: 100vh;
+			position: fixed;
+			top: 70px;
+			left: -100%;
+			text-align: center;
+			background: #7209b7;
+			transition: all 0.5s ease;
+		}
+
+		li {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			border: 1px solid grey;
+			z-index: 1;
+
+			&:hover {
+				background: #f72585;
+			}
+		}
+
+		a {
+			font-size: 18px;
+
+			&:hover {
+				background: transparent;
+				color: #fff;
+			}
+		}
+
+		.checkbtn {
+			display: block;
+			font-size: 25px;
+			line-height: 70px;
+			float: right;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		#check:checked ~ ul {
+			// el pseudo ~ es para que se apliquelos estilos a ul hermanos del elemento id #check
+			left: 0;
+		}
+	}
+
+	.banner,
+	.servicios,
+	.clientes,
+	.contacto {
+		padding: 40px;
+	}
+
+	.banner {
+		h2 {
+			font-size: 45px;
+		}
+
+		p,
+		a {
+			font-size: 16px;
+		}
+	}
+
+	.container h2 {
+		font-size: 35px;
+	}
+
+	.servicios {
+		.servicios-imgx {
+			width: 90%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.clientes {
+		.clientes-card {
+			width: 90%;
+			margin-bottom: 20px;
+		}
+	}
+
+	.contacto {
+		.form-contact,
+		.contacto-img {
+			width: 100%;
+		}
+
+		.form-contact .form-control,
+		.form-contact .submt-btn {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.footer {
+		p {
+			font-size: 14px;
+		}
+	}
+}

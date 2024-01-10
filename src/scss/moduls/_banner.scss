@@ -1,0 +1,51 @@
+.banner {
+	position: relative; // deber ser relative para que el before pueda colocar encima la capa oscura
+	background: url(../img/bannerprincipal.jpg);
+	background-size: cover;
+	min-height: $alturaSeccion;
+	padding: $relleno;
+
+	// esto es para crear una capa oscura sobre el banner
+	&::before {
+		width: 100%;
+		height: 100%;
+		position: absolute; //debe ser absolute para que quede por encima de la img
+		top: 0;
+		left: 0;
+		content: ""; //debe llevar content
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.banner-text {
+		display: block;
+		position: relative; //al se block y relative permite mover el elemento a donde es deseado
+		color: #fff;
+		transform: translateY(
+			30vh
+		); //translateY permite mover elemento en el eje vertical
+	}
+
+	h2 {
+		font-size: 50px;
+	}
+
+	p,
+	a {
+		font-size: 20px;
+	}
+
+	a {
+		display: inline-block; //se coloca inline-block para que este texto quede separado del texto de arriba
+		padding: 10px;
+		margin: 10px 0 0 0;
+		border: 3px solid #4cc9f0;
+		text-decoration: none;
+		color: #4cc9f0;
+		transition: all 0.5s ease-out;
+
+		&:hover {
+			background: #4cc9f0;
+			color: #fff;
+		}
+	}
+}
